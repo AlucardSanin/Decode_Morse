@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Hospital database</b></h3>
+  <h3><b>Morse decoder</b></h3>
 
 </div>
 
@@ -17,7 +17,6 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
 - [👥 Author](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐ Show your support](#support)
 - [📝 License](#license)
@@ -26,19 +25,19 @@
 
 # 📖 Hospital database <a name="about-project"></a>
 
-**Hospital database** is a psql database for a hospital. Where you can store patients information, insert some data into it, and query it.
+**Morse decoder** is ruby project where you can translate from morse code to plain language.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
-- Psql
+- Ruby
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Patients information**
-- **Query**
-- **Insert information**
+- **Char decoder**
+- **Word decoder**
+- **Message decoder**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,6 +52,8 @@ To get a local copy up and running follow these simple example steps.
 In order to run this project you need:
 
 - Github
+- VS code
+- Ruby
 
 ### Setup
 
@@ -60,8 +61,9 @@ Clone this repository to your desired folder:
 
 - Choose a local directory.
 - Open a Git Terminal.
-- write: git clone https://github.com/Yilikal250/database.git
+- write: git clone https://github.com/AlucardSanin/Decode_Morse.git
 - Open the repository with VS Code.
+- Install bundlers in terminal
 
 <!-- AUTHORS -->
 
@@ -84,15 +86,6 @@ Clone this repository to your desired folder:
 - GitHub: [@Yilikal250](https://github.com/githubhandle)
 - Twitter: [@@TeshomeYilikal](https://twitter.com/twitterhandle)
 - LinkedIn: [teshomeyilikal250@gmail.com](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **New data**
-- [ ] **New queries**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
