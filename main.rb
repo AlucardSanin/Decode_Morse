@@ -31,11 +31,11 @@ def decode_char(char)
 end
 
 def decode_word(word)
-  # translate_word = decode_char(word.split)
-  # puts decode_char(word.split)
-  puts word.split
-  # translate_word = translate_word.join
-  # return translate_word
+  letters = word.split
+  letters.map! do |char|
+    decode_char(char)
+  end
+  return letters.join
 end
 
 puts decode_char(".-")
