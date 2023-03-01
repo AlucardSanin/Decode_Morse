@@ -1,33 +1,11 @@
-$dictionary = {
-  '.-' => "A",
-  '-...' => "B",
-  '-.-.' => "C",
-  '-..' => "D",
-  '.' => "E",
-  '..-.' => "F",
-  '--.' => "G",
-  '....' => "H",
-  '..' => "I",
-  '.---' => "J",
-  '-.-' => "K",
-  '.-..' => "L",
-  '--' => "M",
-  '-.' => "N",
-  '---' => "O",
-  '.--.' => "P",
-  '--.-' => "Q",
-  '.-.' => "R",
-  '...' => "S",
-  '-' => "T",
-  '..-' => "U",
-  '...-' => "V",
-  '.--' => "W",
-  '-..-' => "X",
-  '-.--' => "Y",
-  '--..' => "Z"
-}
 def decode_char(char)
-  $dictionary[char]
+  dictionary = {
+    '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H',
+    '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P',
+    '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T', '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
+    '-.--' => 'Y', '--..' => 'Z'
+  }
+  dictionary[char]
 end
 
 def decode_word(word)
@@ -35,25 +13,17 @@ def decode_word(word)
   letters.map! do |char|
     decode_char(char)
   end
-  return letters.join
+  letters.join
 end
 
-puts decode_char(".-")
-puts decode_word("-- -.--")
+def decode(message)
+  full_message = message.split('   ')
+  full_message.map! do |word|
+    decode_word(word)
+  end
+  full_message.join(' ')
+end
 
-# def translate(letter)
-#   dictionary[letter]
-# end
-# user_string = gets.chomp
-# words = user_string.split('   ')
-
-# words.map! do |word|
-#   letters = word.split
-#   letters.map! do |letter|
-#     dictionary[letter]
-#   end
-#   letters.join
-# end
-
-# sentence =  words.join(' ')
-# puts sentence
+puts decode_char('.-')
+puts decode_word('-- -.--')
+puts decode('-- -.--   -. .- -- .')
